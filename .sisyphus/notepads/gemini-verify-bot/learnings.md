@@ -212,3 +212,11 @@
 - NO channel membership checks
 - Single verification service (SheerID only)
 
+
+## Task 8: Docker Deployment
+- Created `Dockerfile` using `python:3.11-slim` with comprehensive system dependencies for Playwright/Chromium.
+- Key system dependencies: `libgbm1`, `libnss3`, `libatk-bridge2.0-0`, `libcairo2-dev`, `libpango1.0-dev`, etc.
+- Added `shm_size: '2gb'` to `docker-compose.yml` to prevent Chromium shared memory crashes.
+- Implemented volume persistence for `data/` directory to preserve SQLite database across restarts.
+- Used unbuffered output (`python -u`) and `HEALTHCHECK` with `pgrep` for better container monitoring.
+- Reference repo analysis confirmed that Playwright needs several X11 and audio libs even for headless mode.
