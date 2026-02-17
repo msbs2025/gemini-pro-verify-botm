@@ -1,0 +1,22 @@
+Valid URL 1: https://services.sheerid.com/verify/12345?verificationId=abc123def456
+Extracted: abc123def456
+Expected: abc123def456
+PASS: True
+
+Valid URL 2 (uppercase): https://example.com?verificationId=ABCDEF123456
+Extracted: ABCDEF123456
+Expected: ABCDEF123456
+PASS: True
+
+Invalid URL 1: https://services.sheerid.com/verify/12345
+Extracted: None
+Expected: None
+PASS: True
+
+Invalid URL 2: https://example.com?id=12345&token=xyz
+Extracted: None
+Expected: None
+PASS: True
+
+=== URL Parsing Test Summary ===
+ALL TESTS PASSED: True

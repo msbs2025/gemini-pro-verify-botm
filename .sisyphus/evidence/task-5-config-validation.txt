@@ -1,0 +1,21 @@
+=== Config Validation Test ===
+
+Required constants:
+  PROGRAM_ID: 67c8c14f5f17a83b745e3f82
+  SHEERID_BASE_URL: https://services.sheerid.com
+  DEFAULT_SCHOOL_ID: 2565
+  SCHOOLS: dict with 10 entries
+
+PROGRAM_ID format check: True
+SHEERID_BASE_URL value check: True
+DEFAULT_SCHOOL_ID value check: True
+SCHOOLS dict contains 2565: True
+PSU Main Campus name: True
+PSU Main Campus id type/value: True
+PSU Main Campus idExtended type/value: True
+
+=== Test Summary ===
+Total tests: 7
+Passed: 7
+Failed: 0
+ALL TESTS PASSED: True
