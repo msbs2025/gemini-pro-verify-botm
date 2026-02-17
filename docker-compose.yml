@@ -1,0 +1,13 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    shm_size: '2gb' # CRITICAL for Playwright/Chromium
+    volumes:
+      - ./data:/app/data # Persist SQLite DB
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
