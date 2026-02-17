@@ -1,0 +1,2 @@
+Count: 1
+Data: {'id': 1, 'verification_url': 'http://test.com', 'verification_id': 'vid123', 'status': 'pending', 'result': 'None', 'created_at': '2026-02-17 07:02:09'}
