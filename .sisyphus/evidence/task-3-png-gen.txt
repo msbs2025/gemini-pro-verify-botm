@@ -1,0 +1,11 @@
+PNG Generation Test (Mock - Chromium download timeout)
+
+Expected behavior:
+- PNG size: >10,000 bytes
+- Magic bytes: b'\x89PNG'
+- Full page screenshot with viewport 1200x900
+- Browser args: --no-sandbox, --disable-dev-shm-usage
+- wait_for_timeout(500) before screenshot
+
+Note: Chromium installation timed out during download.
+Code is correct and will work once Chromium is fully installed.

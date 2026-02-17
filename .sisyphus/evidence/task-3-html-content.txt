@@ -1,0 +1,49 @@
+HTML Length: 10481 characters
+
+Content Checks:
+  Alice Johnson: PASS
+  LionPATH: PASS
+  PennState: PASS
+  Enrolled: PASS
+  #1E407C: PASS
+  CMPSC: PASS
+  Fall 2025: PASS
+
+HTML Preview (first 1000 chars):
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LionPATH - Student Center</title>
+    <style>
+        :root {
+            --psu-blue: #1E407C;
+            --psu-navy: #001E44;
+            --psu-light-blue: #96BEE6;
+            --psu-white: #FFFFFF;
+            --border-color: #D6D6D6;
+            --bg-gray: #F5F5F5;
+            --text-dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', 'Helvetica Neue', sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-color: var(--psu-blue);
+            color: var(--psu-white);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-be
