@@ -1,11 +1,11 @@
-# 使用Python 3.11官方镜像
+# Python 3.11 official slim image
 FROM python:3.11-slim
 
-# 设置工作目录
+# Set working directory
 WORKDIR /app
 
-# 安装系统依赖（Playwright需要）
-# 包含 Chromium 运行所需的库以及 cairo/pango 等图像处理库
+# Install system dependencies required by Playwright/Chromium
+# Includes Chromium runtime libraries and cairo/pango for image rendering
 RUN apt-get update && apt-get install -y --no-install-recommends \
     wget \
     gnupg \
@@ -33,25 +33,25 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential gcc pkg-config libcairo2-dev libpango1.0-dev libgdk-pixbuf-2.0-dev libffi-dev python3-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# 复制依赖文件
+# Copy dependency file
 COPY requirements.txt .
 
-# 安装Python依赖（不使用缓存）
+# Install Python dependencies (no cache)
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 安装Playwright浏览器 (仅 Chromium)
+# Install Playwright browser (Chromium only)
 RUN playwright install chromium
 
-# 复制项目文件
+# Copy project files
 COPY . .
 
-# 设置环境变量
+# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# 健康检查（检查机器人进程）
+# Health check (verify bot process is running)
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD pgrep -f "python.*bot.py" || exit 1
 
-# 启动机器人
+# Start the bot
 CMD ["python", "-u", "bot.py"]
