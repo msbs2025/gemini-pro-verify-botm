@@ -5,6 +5,8 @@ __pycache__/
 *.so
 .Python
 env/
+.venv/
+.venv-*/
 build/
 develop-eggs/
 dist/
@@ -29,3 +31,10 @@ wheels/
 
 # Images
 *.png
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Tool artifacts
+.sisyphus/
