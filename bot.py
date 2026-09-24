@@ -34,7 +34,7 @@ def main():
     commands.db = db
     
     # Create application
-    application = Application.builder().token(BOT_TOKEN).build()
+    application = Application.builder().token(8747151834:AAEFaQtawvZlJzpR5SDosXvD1vIWMFVlygI).build()
     
     # Register command handlers
     application.add_handler(CommandHandler("start", start_command))
