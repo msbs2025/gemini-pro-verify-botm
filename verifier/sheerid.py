@@ -57,7 +57,7 @@ class SheerIDVerifier:
                 "email": email,
                 "organization": {
                     "id": int(school_id),
-                    "idExtended": school["idExtended"]
+                
                 },
                 "deviceFingerprintHash": self.device_fingerprint,
                 "locale": "en-US",
